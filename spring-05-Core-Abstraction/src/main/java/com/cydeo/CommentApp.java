@@ -1,5 +1,4 @@
 package com.cydeo;
-
 import com.cydeo.config.CommentConfig;
 import com.cydeo.model.Comment;
 import com.cydeo.service.CommentService;
