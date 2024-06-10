@@ -24,4 +24,6 @@ public class Student {
     private LocalDate birthDateTime;
     @Enumerated(EnumType.STRING)
     private Gender gender;
+    @Transient
+    private String city;
 }
