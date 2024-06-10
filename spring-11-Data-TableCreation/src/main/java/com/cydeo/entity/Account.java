@@ -2,9 +2,10 @@ package com.cydeo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 
 import java.math.BigDecimal;
-@Entity
+@MappedSuperclass
 public class Account {
     @Id
     private  Long id;
