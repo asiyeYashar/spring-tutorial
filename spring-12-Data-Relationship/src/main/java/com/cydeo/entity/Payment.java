@@ -1,5 +1,6 @@
 package com.cydeo.entity;
 
+import com.cydeo.enums.Status;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,12 @@ public class Payment {
     @Column(columnDefinition = "DATE")
     private LocalDate createDate;
     private BigDecimal amount;
+    @Enumerated(EnumType.STRING)
+    private Status paymentStatus;
 
-
+    public Payment(LocalDate createDate, BigDecimal amount, Status paymentStatus) {
+        this.createDate = createDate;
+        this.amount = amount;
+        this.paymentStatus = paymentStatus;
+    }
 }
