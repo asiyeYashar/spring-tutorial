@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 
 import java.math.BigDecimal;
-@MappedSuperclass
+@MappedSuperclass//don't created table , just provide information for other class tables
 public class Account {
     @Id
     private  Long id;
