@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "items")
 @Data
@@ -14,6 +16,8 @@ public class Item {
     private  Long id;
     private  String itemName;
     private String code;
+    @ManyToMany(mappedBy = "items")
+    private List<Cart> carts;
 
     public Item(String itemName, String code) {
         this.itemName = itemName;
