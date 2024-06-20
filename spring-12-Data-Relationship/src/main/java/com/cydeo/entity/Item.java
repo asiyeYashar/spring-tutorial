@@ -16,7 +16,7 @@ public class Item {
     private  Long id;
     private  String itemName;
     private String code;
-    @ManyToMany(mappedBy = "items")
+    @ManyToMany(mappedBy = "itemList")
     private List<Cart> carts;
 
     public Item(String itemName, String code) {
