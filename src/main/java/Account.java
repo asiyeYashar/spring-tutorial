@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Table(name = "account_details")
-public class Account extends BaseEntity {
-
+public class Account extends BaseEntity{
     private String name;
     private String address;
     private String country;
@@ -20,6 +19,6 @@ public class Account extends BaseEntity {
     private String postalCode;
     @Enumerated(EnumType.STRING)
     private UserRole role;
-    @OneToOne(mappedBy = "account")
-    private User user;
+  @OneToOne(mappedBy = "account")
+    private  User user;
 }
